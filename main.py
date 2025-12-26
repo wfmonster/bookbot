@@ -9,10 +9,10 @@ def get_book_text(path):
     
     return file_contents
 
-def count_words(text):
-    return len(text.split())
-
 def print_report(file_path, word_count, char_count):
+    """
+    Prints Character Count statistics based on the given book.
+    """
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {file_path}...")
     print("----------- Word Count ----------")
@@ -27,8 +27,7 @@ def print_report(file_path, word_count, char_count):
 
 
 def main():
-    """
-    Example Execution: 
+    """ Example Execution: 
         >> python3 main.py books/frankenstein.txt
     """
 
@@ -43,16 +42,6 @@ def main():
     else:
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
-
-
-
-    
-    # print(f"Found {num_words} total words")
-    # print(chars)
-    # print(sorted_chars)
-
-
-
 
 if __name__ == "__main__":
     main()
